@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="en" class="sm:scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Acme Rockets</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body
+    class="bg-slate-50 dark:bg-blue-950 dark:text-blue-200 relative sm:px-3 py-0"
+  >
+    <header
+      class="bg-teal-700 text-teal-200 sticky top-0 left-0 w-full z-50 shadow-md dark:bg-blue-800 dark:text-blue-200 transition-transform duration-300 transform translate-y-0"
+    >
+      <section class=" max-w-screen-xl mx-auto p-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold">🚀 Acme Rockets</a>
+        <aside class="">
+          <button
+            id="hamburger-button"
+            class="relative h-8 w-8 cursor-pointer text-3xl md:hidden"
+          >
+            <!-- &#9776; -->
+            <div
+              class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']"
+            ></div>
+          </button>
+          <nav
+            class="hidden sm:block relative space-x-8 text-xl"
+            aria-label="main"
+          >
+            <ul
+              class="flex gap-4"
+            >
+              <li><a href="#hero" class="hover:text-teal-100">Home</a></li>
+              <li><a href="#about" class="hover:text-teal-100">About</a></li>
+              <li>
+                <a href="#products" class="hover:text-teal-100">Products</a>
+              </li>
+              <li>
+                <a href="#contact" class="hover:text-teal-100">Contact</a>
+              </li>
+              <li>
+                <a href="#testimonials" class="hover:text-teal-100"
+                  >Testimonials</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </aside>
+      </section>
+      <section
+        id="mobile-menu"
+        class="top-68 justify-center absolute hidden w-full origin-top animate-open-menu flex-col bg-black text-3xl"
+      >
+        <!-- <button class="text-8xl self-end px-6">
+                &times;
+            </button> -->
+        <nav class="flex h-5/6 flex-col items-center py-8" aria-label="mobile">
+          <a href="#hero" class="w-full py-2 text-center hover:opacity-90"
+            >Home</a
+          >
+          <a href="#about" class="w-full py-2 text-center hover:opacity-90"
+            >About</a
+          >
+          <a href="#mobprod" class="w-full py-2 text-center hover:opacity-90"
+            >Products</a
+          >
+          <a
+            href="#testimonials"
+            class="w-full py-2 text-center hover:opacity-90"
+            >Testimonials</a
+          >
+          <a href="#contact" class="w-full py-2 text-center hover:opacity-90"
+            >Contact Us</a
+          >
+          <a href="#footer" class="w-full py-2 text-center hover:opacity-90"
+            >Legal</a
+          >
+        </nav>
+      </section>
+    </header>
+
+    <main class="max-w-screen-xl mx-auto px-6 py-4">
+      <section
+        id="hero"
+        class="flex flex-col justify-between sm:justify-center sm:flex-row items-center gap-8 mb-12 scroll-mt-40"
+      >
+        <article
+          class="sm:w-1/2 text-center sm:text-left mt-9 tracking-tight leading-10"
+        >
+          <h2 class="text-4xl font-bold my-3 sm:my-8">
+            Welcome to
+            <span
+              class="bg-indigo-600 dark:bg-indigo-500 text-white dark:text-blue-100"
+              >Acme Rockets</span
+            >
+            - Ignite Your Passion for Space Exploration!
+          </h2>
+
+          <p class="text-lg mb-4 sm:mb-8">
+            Acme Rockets is dedicated to providing high-quality rocketry
+            products and services. Whether you're a beginner or an experienced
+            rocket enthusiast, we know how to fuel your
+            <span class="text-white dark:text-blue-500 font-bold"
+              >passion for space exploration</span
+            >.
+          </p>
+
+          <p class="text-xl mb-4 sm:mb-8">
+            Your one-stop shop for all things rocketry.
+          </p>
+          <a
+            href="/products"
+            class="bg-teal-500 text-white text-xl font-bold px-6 py-3 rounded-full hover:bg-teal-600 mt-4 sm:mt-8"
+            >Shop Now</a
+          >
+        </article>
+
+        <img
+          loading="lazy"
+          src="./assets/rocketdab.png"
+          alt="Rocket"
+          class="sm:w-1/2 w-full p-3 bg-teal-800 rounded-lg shadow-lg hover:shadow-slate-50"
+        />
+      </section>
+      <hr class="bg-gray-800 dark:bg-gray-200 w-5/6 mx-auto" />
+      <section
+        id="about"
+        class="flex flex-col justify-between sm:justify-center items-center gap-8 mb-12 scroll-mt-40"
+      >
+        <h2 class="text-4xl font-bold my-3 sm:my-8">
+          About
+          <span
+            class="bg-indigo-600 dark:bg-indigo-500 text-white dark:text-blue-100"
+            >Acme Rockets</span
+          >
+        </h2>
+        <article class="flex w-full gap-4 justify-between max-sm:flex-col">
+          <div class="column flex-1">
+            <img loading="lazy" id="displayedImage" src="./assets/rocketdab.png" alt="Image" />
+          </div>
+          <div class="column flex-1">
+            <details class="my-5 pb-5" open>
+              <summary
+                class="bg-teal-500 text-white text-xl font-bold pl-3 rounded-lg my-3"
+                style="list-style: none; outline: none"
+              >
+                Text 1
+              </summary>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              labore recusandae quia provident eaque accusamus a corporis et
+              culpa placeat nisi fuga autem vel, minus, voluptas impedit
+              adipisci tenetur libero!
+              <div
+                class="progress-bar my-4 flex justify-between items-center"
+                style="height: 5px"
+              >
+                <progress
+                  id="progress1"
+                  class="dark:bg-blue-800 bg-teal-700 progress w-5/6 rounded-full h-full"
+                  value="0"
+                  max="100"
+                ></progress>
+                <button class="pauseResumeButton">⏸️</button>
+              </div>
+            </details>
+
+            <details class="my-5 pb-5">
+              <summary
+                class="bg-teal-500 text-white text-xl font-bold pl-3 rounded-lg my-3"
+                style="list-style: none; outline: none"
+              >
+                Text 2
+              </summary>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Perspiciatis tempore omnis, id, aliquid, delectus perferendis
+              voluptas praesentium quia minus nisi tempora officiis ab rem aut
+              ipsam iure voluptatum veniam voluptate!
+              <div
+                class="progress-bar my-4 flex justify-between items-center transition-all duration-300 ease-in"
+                style="height: 5px"
+              >
+                <progress
+                  id="progress2"
+                  class="progress w-5/6 rounded-full h-full dark:bg-blue-800 bg-teal-700"
+                  value="0"
+                  max="100"
+                ></progress>
+                <button class="pauseResumeButton">⏸️</button>
+              </div>
+            </details>
+
+            <details class="my-5 pb-5">
+              <summary
+                class="bg-teal-500 text-white text-xl font-bold pl-3 rounded-lg my-3"
+                style="list-style: none; outline: none"
+              >
+                Text 3
+              </summary>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi
+              illum alias, temporibus magnam odio iste quae, quidem quis dolore
+              id quisquam velit mollitia perferendis consectetur reprehenderit,
+              quos molestiae eos magni?
+              <div
+                class="progress-bar my-4 flex justify-between items-center"
+                style="height: 5px"
+              >
+                <progress
+                  id="progress3"
+                  class="progress w-5/6 rounded-full h-full dark:bg-blue-800 bg-teal-700"
+                  value="0"
+                  max="100"
+                ></progress>
+                <button class="pauseResumeButton">⏸️</button>
+              </div>
+            </details>
+
+            <details class="my-5 pb-5">
+              <summary
+                class="bg-teal-500 text-white text-xl font-bold pl-3 rounded-lg my-3"
+                style="list-style: none; outline: none"
+              >
+                Text 4
+              </summary>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum rem accusamus assumenda. A neque minima at tenetur
+              consequatur quod voluptates eaque. Hic facere fugiat praesentium,
+              voluptatibus accusantium voluptas ex ipsam.
+              <div
+                class="progress-bar my-4 flex justify-between items-center"
+                style="height: 5px"
+              >
+                <progress
+                  id="progress4"
+                  class="progress w-5/6 rounded-full h-full dark:bg-blue-800 bg-teal-700"
+                  value="0"
+                  max="100"
+                ></progress>
+                <button class="pauseResumeButton">⏸️</button>
+              </div>
+            </details>
+          </div>
+        </article>
+      </section>
+      <hr class="mx-auto bg-gray-800 dark:bg-gray-200 w-5/6" />
+       <section
+        id="products"
+        class="flex flex-col sm:justify-between justify-center items-center gap-2 mb-12 scroll-mt-40 overflow-hidden relative"
+      >
+        <h2 class="text-4xl font-bold my-3 sm:my-8">
+          Exotic
+          <span
+            class="bg-indigo-600 dark:bg-indigo-500 text-white dark:text-blue-100"
+            >Products</span
+          >
+        </h2>
+        <section class="md:flex justify-around items-start gap-5 w-full my-5 min-h-screen hidden relative md:justify-between">
+          <aside class="w-1/2 sticky top-0 left-0 pt-0 flex flex-col justify-between overflow-hidden"
+          >
+            <div class="my-8">
+              <p class="text-lg mb-4 sm:mb-8 w-fit overflow-hidden">
+                At Acme Rockets, we offer a wide range of high-quality rocketry
+                products to fuel your passion for space exploration. Whether
+                you're a beginner or an experienced rocket enthusiast, we have
+                something for everyone.
+              </p>
+            </div>
+            <div class="my-8">
+              <p class="text-xs mb-4 sm:mb-8 font-thin max-w-xs w-fit">
+                From rocket kits and engines to launch pads and recovery
+                systems, we have everything you need to build and launch your
+                own rockets. Our products are designed to be safe, reliable, and
+                easy to use, ensuring a successful and thrilling rocketry
+                experience. Browse through our collection and find the perfect
+                rocketry products to ignite your imagination and take your space
+                exploration to new heights. Shop now and embark on an exciting
+                journey with Acme Rockets.
+              </p>
+              <a
+                href="/products"
+                class="bg-teal-500 text-white text-xl font-bold px-6 py-3 rounded-full hover:bg-teal-600 mt-4 sm:mt-8"
+              >
+                View Products
+              </a>
+            </div>
+          </aside>
+          <article class="w-1/2 flex flex-col items-center gap-5">
+            <div class="flex">
+              <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+                <div
+                  class="bg-contain bg-no-repeat bg-center h-56 m-4 p-4 min-w-72"
+                  style="
+                    background-image: url(&quot;./assets/rocketdab.png&quot;);
+                  "
+                >
+                  <div class="flex justify-end">
+                    <svg
+                      class="h-6 w-6 text-black fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12.76 3.76a6 6 0 0 1 8.48 8.48l-8.53 8.54a1 1 0 0 1-1.42 0l-8.53-8.54a6 6 0 0 1 8.48-8.48l.76.75.76-.75zm7.07 7.07a4 4 0 1 0-5.66-5.66l-1.46 1.47a1 1 0 0 1-1.42 0L9.83 5.17a4 4 0 1 0-5.66 5.66L12 18.66l7.83-7.83z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="p-2 m-2">
+                  <p
+                    class=" my-2 uppercase tracking-wide text-sm font-bold text-gray-700"
+                  >
+                    Rocket Launch • 5y old
+                  </p>
+                  <p class="my-0 text-3xl text-gray-900">$950,000</p>
+                  <button class="bg-teal-500 text-white text-xl font-normal px-4 py-2 rounded-full hover:bg-teal-600 mt-4">
+                    Available Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+                <div
+                  class="bg-contain bg-no-repeat bg-center h-56 m-4 p-4 min-w-72"
+                  style="
+                    background-image: url(&quot;./assets/rocketlaunch.png&quot;);
+                  "
+                >
+                  <div class="flex justify-end">
+                    <svg
+                      class="h-6 w-6 text-black fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12.76 3.76a6 6 0 0 1 8.48 8.48l-8.53 8.54a1 1 0 0 1-1.42 0l-8.53-8.54a6 6 0 0 1 8.48-8.48l.76.75.76-.75zm7.07 7.07a4 4 0 1 0-5.66-5.66l-1.46 1.47a1 1 0 0 1-1.42 0L9.83 5.17a4 4 0 1 0-5.66 5.66L12 18.66l7.83-7.83z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="p-2 m-2">
+                  <p
+                    class=" my-2 uppercase tracking-wide text-sm font-bold text-gray-700"
+                  >
+                    Rocket Launch • 5y old
+                  </p>
+                  <p class="my-0 text-3xl text-gray-900">$950,000</p>
+                  <button class="bg-teal-500 text-white text-xl font-normal px-4 py-2 rounded-full hover:bg-teal-600 mt-4">
+                    Available Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+                <div
+                  class="bg-contain bg-no-repeat bg-center h-56 m-4 p-4 min-w-72"
+                  style="
+                    background-image: url(&quot;./assets/rocketman.png&quot;);
+                  "
+                >
+                  <div class="flex justify-end">
+                    <svg
+                      class="h-6 w-6 text-black fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12.76 3.76a6 6 0 0 1 8.48 8.48l-8.53 8.54a1 1 0 0 1-1.42 0l-8.53-8.54a6 6 0 0 1 8.48-8.48l.76.75.76-.75zm7.07 7.07a4 4 0 1 0-5.66-5.66l-1.46 1.47a1 1 0 0 1-1.42 0L9.83 5.17a4 4 0 1 0-5.66 5.66L12 18.66l7.83-7.83z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="p-2 m-2">
+                  <p
+                    class=" my-2 uppercase tracking-wide text-sm font-bold text-gray-700"
+                  >
+                    Rocket Man • 20y old
+                  </p>
+                  <p class="my-0 text-3xl text-gray-900">$100,000</p>
+                  <button class="bg-teal-500 text-white text-xl font-normal px-4 py-2 rounded-full hover:bg-teal-600 mt-4">
+                    Available Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+                <div
+                  class="bg-contain bg-no-repeat bg-center h-56 m-4 p-4 min-w-72"
+                  style="
+                    background-image: url(&quot;./assets/rocketride.png&quot;);
+                  "
+                >
+                  <div class="flex justify-end">
+                    <svg
+                      class="h-6 w-6 text-black fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12.76 3.76a6 6 0 0 1 8.48 8.48l-8.53 8.54a1 1 0 0 1-1.42 0l-8.53-8.54a6 6 0 0 1 8.48-8.48l.76.75.76-.75zm7.07 7.07a4 4 0 1 0-5.66-5.66l-1.46 1.47a1 1 0 0 1-1.42 0L9.83 5.17a4 4 0 1 0-5.66 5.66L12 18.66l7.83-7.83z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="p-2 m-2">
+                  <p
+                    class=" my-2 uppercase tracking-wide text-sm font-bold text-gray-700"
+                  >
+                    Rocket Ride • 25y old+
+                  </p>
+                  <p class="my-0 text-3xl text-gray-900">$550,000</p>
+                  <button class="bg-teal-500 text-white text-xl font-normal px-4 py-2 rounded-full hover:bg-teal-600 mt-4">
+                    Available Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </section>
+      
+      <section id="mobprod" class="swiper mySwiper h-screen w-screen relative md:hidden">
+        <div class=" swiper-wrapper">
+          <div class="swiper-slide flex h-fit items-center justify-center">
+            <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+              <div
+                class="bg-contain bg-no-repeat bg-center h-56 m-4 p-4 min-w-72"
+                style="
+                  background-image: url(&quot;./assets/rocketdab.png&quot;);
+                "
+              >
+                <div class="flex justify-end">
+                  <svg
+                    class="h-6 w-6 text-black fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12.76 3.76a6 6 0 0 1 8.48 8.48l-8.53 8.54a1 1 0 0 1-1.42 0l-8.53-8.54a6 6 0 0 1 8.48-8.48l.76.75.76-.75zm7.07 7.07a4 4 0 1 0-5.66-5.66l-1.46 1.47a1 1 0 0 1-1.42 0L9.83 5.17a4 4 0 1 0-5.66 5.66L12 18.66l7.83-7.83z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="p-4 m-4">
+                <p
+                  class=" my-4 uppercase tracking-wide text-sm font-bold text-gray-700"
+                >
+                  Rocket Launch • 5y old
+                </p>
+                <p class="my-2 text-3xl text-gray-900">$950,000</p>
+                <button class="bg-teal-500 text-white text-xl font-normal px-4 py-2 rounded-full hover:bg-teal-600 mt-4 sm:mt-8">
+                  Available Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex h-fit items-center justify-center">
+            <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+              <div
+                class="bg-contain bg-no-repeat bg-center h-56 m-4 p-4 min-w-72"
+                style="
+                  background-image: url(&quot;./assets/rocketlaunch.png&quot;);
+                "
+              >
+                <div class="flex justify-end">
+                  <svg
+                    class="h-6 w-6 text-black fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12.76 3.76a6 6 0 0 1 8.48 8.48l-8.53 8.54a1 1 0 0 1-1.42 0l-8.53-8.54a6 6 0 0 1 8.48-8.48l.76.75.76-.75zm7.07 7.07a4 4 0 1 0-5.66-5.66l-1.46 1.47a1 1 0 0 1-1.42 0L9.83 5.17a4 4 0 1 0-5.66 5.66L12 18.66l7.83-7.83z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="p-4 m-4">
+                <p
+                  class=" my-4 uppercase tracking-wide text-sm font-bold text-gray-700"
+                >
+                  Rocket Launch • 5y old
+                </p>
+                <p class="my-2 text-3xl text-gray-900">$950,000</p>
+                <button class="bg-teal-500 text-white text-xl font-normal px-4 py-2 rounded-full hover:bg-teal-600 mt-4 sm:mt-8">
+                  Available Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex h-fit items-center justify-center">
+            <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+              <div
+                class="bg-contain bg-no-repeat bg-center h-56 m-4 p-4 min-w-72"
+                style="
+                  background-image: url(&quot;./assets/rocketman.png&quot;);
+                "
+              >
+                <div class="flex justify-end">
+                  <svg
+                    class="h-6 w-6 text-black fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12.76 3.76a6 6 0 0 1 8.48 8.48l-8.53 8.54a1 1 0 0 1-1.42 0l-8.53-8.54a6 6 0 0 1 8.48-8.48l.76.75.76-.75zm7.07 7.07a4 4 0 1 0-5.66-5.66l-1.46 1.47a1 1 0 0 1-1.42 0L9.83 5.17a4 4 0 1 0-5.66 5.66L12 18.66l7.83-7.83z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="p-4 m-4">
+                <p
+                  class=" my-4 uppercase tracking-wide text-sm font-bold text-gray-700"
+                >
+                  Rocket Man • 20y old
+                </p>
+                <p class="my-2 text-3xl text-gray-900">$100,000</p>
+                <button class="bg-teal-500 text-white text-xl font-normal px-4 py-2 rounded-full hover:bg-teal-600 mt-4 sm:mt-8">
+                  Available Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex h-fit items-center justify-center">
+            <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+              <div
+                class="bg-contain bg-no-repeat bg-center h-56 m-4 p-4 min-w-72"
+                style="
+                  background-image: url(&quot;./assets/rocketride.png&quot;);
+                "
+              >
+                <div class="flex justify-end">
+                  <svg
+                    class="h-6 w-6 text-black fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12.76 3.76a6 6 0 0 1 8.48 8.48l-8.53 8.54a1 1 0 0 1-1.42 0l-8.53-8.54a6 6 0 0 1 8.48-8.48l.76.75.76-.75zm7.07 7.07a4 4 0 1 0-5.66-5.66l-1.46 1.47a1 1 0 0 1-1.42 0L9.83 5.17a4 4 0 1 0-5.66 5.66L12 18.66l7.83-7.83z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="p-4 m-4">
+                <p
+                  class=" my-4 uppercase tracking-wide text-sm font-bold text-gray-700"
+                >
+                  Rocket Ride • 25y old+
+                </p>
+                <p class="my-2 text-3xl text-gray-900">$550,000</p>
+                <button class="bg-teal-500 text-white text-xl font-normal px-4 py-2 rounded-full hover:bg-teal-600 mt-4 sm:mt-8">
+                  Available Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="autoplay-progress">
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span></span>
+        </div>
+      </section>
+     
+      <style>
+          .autoplay-progress {
+            position: absolute;
+            right: 32px;
+            bottom: 26px;
+            z-index: 10;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color:  rgb(31 41 59);;
+          }
+
+        .autoplay-progress svg {
+          --progress: 0;
+          position: absolute;
+          left: 0;
+          top: 0px;
+          z-index: 10;
+          width: 100%;
+          height: 100%;
+          stroke-width: 4px;
+          stroke: rgb(31 41 59);
+          fill: none;
+          stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+          stroke-dasharray: 125.6;
+          transform: rotate(-90deg);
+        }
+      </style>
+     
+     
+      <hr class="mx-auto bg-gray-800 dark:bg-gray-200 w-5/6" />
+
+      <section
+        id="testimonials"
+        class="flex flex-col justify-between sm:justify-center px-6 py-4 items-center gap-8 mb-12 scroll-mt-40"
+      >
+        <h2 class="text-4xl font-bold my-3 sm:my-8">
+          See Client's
+          <span
+            class="bg-indigo-600 dark:bg-indigo-500 text-white dark:text-blue-100"
+            >Testimonials</span
+          >
+        </h2>
+        <figure class="my-12">
+          <blockquote
+            class="bg-teal-700 dark:bg-blue-800 pl-14 pr-8 py-12 rounded-3xl relative"
+          >
+            <p
+              class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2"
+            >
+              Acme has always been there for me. Their Explorer rocket arrived
+              in a wooden crate as expected. Life-long customer! A++ shopping
+              experience.
+            </p>
+          </blockquote>
+          <figcaption
+            class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400"
+          >
+            &#8212;Wile E. Coyote, Genius
+          </figcaption>
+        </figure>
+        <figure class="my-12">
+          <blockquote
+            class="bg-teal-700 dark:bg-blue-800 pl-14 pr-8 py-12 rounded-3xl relative"
+          >
+            <p
+              class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2"
+            >
+              The Acme Adventurer Rocket has thwarted my Illudium Q-36 Explosive
+              Space Modulator on several occassions.
+              <span class="italic">This makes me very, very angry!</span>
+              Nevertheless, K-9 and I have awarded Acme the Martian contract for
+              space exploration rockets based on Acme's quality and sturdy
+              designs.
+            </p>
+          </blockquote>
+          <figcaption
+            class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400"
+          >
+            &#8212;Marvin The Martian &amp; K-9
+          </figcaption>
+        </figure>
+        <figure class="my-12">
+          <blockquote
+            class="bg-teal-700 dark:bg-blue-800 pl-14 pr-8 py-12 rounded-3xl relative"
+          >
+            <p
+              class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2"
+            >
+              I knew I not only wanted &#8212;
+              <span class="italic">I needed</span> &#8212; Acme's Infinity
+              Rocket for my mission in space. Acme delivered in one day! Nothing
+              says <q class="italic">Take me to your leader</q> like Acme's
+              Infinity Rocket! 💯
+            </p>
+          </blockquote>
+          <figcaption
+            class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400"
+          >
+            &#8212;Buzz Lightyear
+          </figcaption>
+        </figure>
+      </section>
+
+      <hr class="mx-auto bg-black dark:bg-white w-1/2 my-3" />
+      <section
+      id="contact"
+      class="flex flex-col justify-between sm:justify-center sm:flex-row px-6 py-4 items-center gap-8 mb-12 scroll-mt-40"
+    >
+      <article
+        class="sm:w-1/2 w-full text-center mt-9 tracking-tight leading-10"
+      >
+        <h2 class="text-4xl font-bold my-3 sm:my-8">
+          Connect with
+          <span
+            class="bg-indigo-600 dark:bg-indigo-500 text-white dark:text-blue-100"
+            >Acme Rockets</span
+          >
+        </h2>
+        <form
+          action=""
+          class="max-w-4xl mx-auto text-2xl sm:text-3xl flex flex-col items-left gap-4"
+        >
+          <label for="subject">Subject:</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            minlength="3"
+            maxlength="60"
+            placeholder="Your Subject"
+            class="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900 dark:border-none"
+          />
+          <label for="message">Message:</label>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+            required
+            class="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900 dark:border-none"
+          ></textarea>
+          <button
+            class="bg-teal-500 text-white text-xl font-bold px-6 py-3 rounded-full hover:bg-teal-600 mt-4 sm:mt-8 w-48"
+          >
+            Submit
+          </button>
+        </form>
+      </article>
+    </section>
+    </main>
+    <footer id="footer" class="bg-teal-700 dark:bg-blue-800 text-white text-xl">
+      <section
+        class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between"
+      >
+        <address>
+          <h2>Acme Rocket-Powered Products, Inc.</h2>
+          555 Astro Way<br />
+          Fairfield, New Jersey 12345-5555<br />
+          Email:
+          <a href="mailto:inquiries@acmerockets.com">Inquires@AcmeRockets.com</a
+          ><br />
+          Phone: <a href="tel:+15555555555">(555) 555-5555</a>
+        </address>
+        <nav class="hidden md:flex flex-col gap-2" aria-label="footer">
+          <a href="#products" class="hover:opacity-90">Our Rockets</a>
+          <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
+          <a href="#contact" class="hover:opacity-90">Contact Us</a>
+        </nav>
+        <div class="flex flex-col sm:gap-2">
+          <p class="text-right">Copyright &copy; <span id="year">2024</span></p>
+          <p class="text-right">All Rights Reserved</p>
+        </div>
+      </section>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let lastScrollTop = 0;
+        const header = document.querySelector("header");
+
+        window.addEventListener("scroll", function () {
+          const currentScroll =
+            window.pageYOffset || document.documentElement.scrollTop;
+          const scrollDirection = currentScroll > lastScrollTop ? "down" : "up";
+
+          // Update the class on the header based on scroll direction
+          header.classList.remove("translate-up", "translate-down");
+          header.classList.add(
+            scrollDirection === "down" ? "translate-up" : "translate-down"
+          );
+
+          lastScrollTop = currentScroll;
+        });
+      });
+    </script>
+
+
+   
+    <script>
+      
+const progressCircle = document.querySelector(".autoplay-progress svg");
+const progressContent = document.querySelector(".autoplay-progress span");
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  on: {
+    autoplayTimeLeft(s, time, progress) {
+      progressCircle.style.setProperty("--progress", 1 - progress);
+      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+    },
+  },
+});
+
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = [
+          "./assets/rocketman.png",
+          "./assets/rocketdab.png",
+          "./assets/rocketlaunch.png",
+          "./assets/rocketride.png",
+        ];
+
+        let currentImageIndex = 0;
+        const progressBarElements = document.querySelectorAll(".progress");
+        const detailsElements = document.querySelectorAll(".column details"); // Define detailsElements
+        let isFirstIterationComp = false;
+        // Function to update displayed image
+        function updateImage() {
+          const displayedImage = document.getElementById("displayedImage");
+          displayedImage.src = images[currentImageIndex];
+        }
+
+        // Function to simulate progress completion for a specific progress bar
+        function simulateProgress(progressBar) {
+          let progress = 0;
+          let interval = setInterval(function () {
+            if (progress >= 100) {
+              clearInterval(interval); // Clear the interval when progress is completed
+              nextSlide();
+            } else if (
+              !progressBar.dataset.paused ||
+              progressBar.dataset.paused === "false"
+            ) {
+              progress++;
+              progressBar.value = progress;
+            }
+          }, 50);
+
+          const pauseResumeButton =
+            progressBar.parentElement.querySelector(".pauseResumeButton");
+          pauseResumeButton.addEventListener("click", function () {
+            progressBar.dataset.paused =
+              progressBar.dataset.paused === "true" ? "false" : "true";
+            pauseResumeButton.textContent =
+              progressBar.dataset.paused === "true" ? "▶️" : "⏸️";
+          });
+        }
+
+        // Function to move to the next slide
+        function nextSlide() {
+          detailsElements[currentImageIndex].removeAttribute("open"); // Close current details
+          currentImageIndex = (currentImageIndex + 1) % images.length; // Move to the next image
+          detailsElements[currentImageIndex].setAttribute("open", ""); // Open next details
+          updateImage(); // Update displayed image
+          resetProgressBars(); // Reset all progress bars
+          simulateProgress(progressBarElements[currentImageIndex]); // Start progress for the new slide
+        }
+
+        // Reset all progress bars to initial state
+        function resetProgressBars() {
+          progressBarElements.forEach((progressBar) => {
+            progressBar.value = 0;
+            progressBar.dataset.paused = "false";
+            const pauseResumeButton =
+              progressBar.parentElement.querySelector(".pauseResumeButton");
+            pauseResumeButton.style.display = ""; // Ensure ⏸️ button display is reset
+            pauseResumeButton.textContent = "⏸️";
+          });
+        }
+
+        // Initialize the first slide and start progress simulation
+        updateImage(); // Update image for the initial slide
+        detailsElements[currentImageIndex].setAttribute("open", ""); // Open details for the initial slide
+        simulateProgress(progressBarElements[currentImageIndex]); // Start progress for the initial slide
+      });
+    </script>
+   <script>
+    
+    const hamburgerBtn = document.getElementById("hamburger-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      const toggleMenu = () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+        hamburgerBtn.classList.toggle("toggle-btn");
+      };
+
+      hamburgerBtn.addEventListener("click", toggleMenu);
+      mobileMenu.addEventListener("click", toggleMenu);
+   </script>
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>
